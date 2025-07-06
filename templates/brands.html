@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top Makeup Brands Available on Amazon – Shop from Maybelline, L'Oreal, Revlon, and more.">
+  <title>Makeup Brands - Blush & Bloom</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/emoji/48/lipstick-emoji.png">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo"><a href="/">Blush & Bloom</a></h1>
+      <ul class="nav-links">
+        <li><a href="/brands">Brands</a></li>
+        <li><a href="/categories">Products</a></li>
+        <li>
+          <form action="/search" method="GET" class="search-bar">
+            <input type="text" name="q" placeholder="Search products or brands...">
+            <button type="submit">Search</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="brands-list">
+      {% for brand, items in brands.items() %}
+        <h2 class="brand-heading">{{ brand }}</h2>
+        <div class="brand-row">
+          {% for product in items[:3] %}
+            <article class="product">
+              <img src="{{ product.image }}" alt="{{ product.title }}">
+              <h3>{{ product.title }}</h3>
+              <p>{{ product.description[:100] }}...</p>
+              <a href="/product/{{ product.id }}">View Product</a>
+            </article>
+          {% endfor %}
+        </div>
+        <div class="see-more">
+          <a href="/brand/{{ brand }}" class="see-more-btn">See more from {{ brand }}</a>
+        </div>
+      {% endfor %}
+    </section>
+  </main>
+<footer>
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Blush & Bloom</h3>
+      <p>
+        Blush & Bloom brings you a premium collection of beauty products sourced through Amazon. We aim to empower beauty with quality, accessibility, and elegance.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/brands">Brands</a></li>
+        <li><a href="/categories">Products</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-socials">
+      <h4>Connect with Us</h4>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="Facebook">
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Blush & Bloom. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

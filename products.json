@@ -1,0 +1,35 @@
+[
+  {
+    "id": "product1",
+    "title": "Matte Liquid Lipstick",
+    "brand": "Maybelline",
+    "category": "Lipstick",
+    "description": "Long-lasting matte finish lipstick.",
+    "marketing_content": "This shade suits every skin tone and lasts 12+ hours.",
+    "image": "/static/img/lipstick1.jpg",
+    "buy_link": "https://www.amazon.com/example1",
+    "ranking": 0
+  },
+  {
+    "id": "product2",
+    "title": "Volumizing Mascara",
+    "brand": "L'Oréal",
+    "category": "Mascara",
+    "description": "Get dramatic volume and lift.",
+    "marketing_content": "Perfect for every eye shape, water-resistant, and smudge-proof.",
+    "image": "/static/img/mascara.jpg",
+    "buy_link": "https://www.amazon.com/example2",
+    "ranking": 3
+  },
+  {
+    "id": "product3",
+    "title": "Silky Foundation",
+    "brand": "Maybelline",
+    "category": "Foundation",
+    "description": "Smooth coverage for all skin types.",
+    "marketing_content": "Gives natural finish with SPF 15.",
+    "image": "/static/img/foundation.jpg",
+    "buy_link": "https://www.amazon.com/example3",
+    "ranking": 5
+  }
+]
